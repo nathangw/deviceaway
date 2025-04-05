@@ -24,6 +24,8 @@
 a:link, span.MsoHyperlink
 	{color:#0563C1;
 	text-decoration:underline;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
 .MsoPapDefault
 	{margin-bottom:8.0pt;
 	line-height:107%;}
@@ -50,7 +52,7 @@ div.WordSection1
   padding:0in 5.4pt 0in 5.4pt;height:16.35pt'>
   <p class=MsoNormal align=center style='margin-bottom:8.0pt;margin-top:0in;
   text-align:center;line-height:107%'><b><a
-  href="http://www.chargemailer.com/english/home.htm">ChargeMailer</a></b></p>
+  href="http://www.deviceaway.net/english/home.htm">DeviceAway</a></b></p>
   </td>
   <td width=61 valign=top style='width:46.0pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0in 5.4pt 0in 5.4pt;height:16.35pt'>
@@ -59,22 +61,22 @@ div.WordSection1
   <td width=77 valign=top style='width:57.9pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0in 5.4pt 0in 5.4pt;height:16.35pt'>
   <p class=MsoNormal align=center style='text-align:center;line-height:107%'><a
-  href="http://www.chargemailer.com/english/setup.htm"><b>Instructions</b></a></p>
+  href="http://www.deviceaway.net/english/setup.htm"><b>Instructions</b></a></p>
   </td>
   <td width=61 valign=top style='width:46.0pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0in 5.4pt 0in 5.4pt;height:16.35pt'>
   <p class=MsoNormal align=center style='text-align:center;line-height:107%'><a
-  href="http://www.chargemailer.com/english/support.htm"><b>Support</b></a></p>
+  href="http://www.deviceaway.net/english/support.htm"><b>Support</b></a></p>
   </td>
   <td width=61 valign=top style='width:46.0pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0in 5.4pt 0in 5.4pt;height:16.35pt'>
   <p class=MsoNormal align=center style='text-align:center;line-height:107%'><a
-  href="http://www.chargemailer.com/english/about.htm"><b>About</b></a></p>
+  href="http://www.deviceaway.net/english/about.htm"><b>About</b></a></p>
   </td>
   <td width=61 valign=top style='width:46.0pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0in 5.4pt 0in 5.4pt;height:16.35pt'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:107%'><b><a
-  href="http://www.chargemailer.com/spanish/commands.htm">Spanish</a></b></p>
+  <p class=MsoNormal align=center style='text-align:center;line-height:107%'><a
+  href="http://www.deviceaway.net/spanish/commands.htm"><b>Spanish</b></a></p>
   </td>
  </tr>
 </table>
@@ -106,7 +108,7 @@ margin-top:0in;text-align:center'><b>&nbsp;</b></p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:0in;margin-top:
   0in;line-height:normal'>Special commands can be enabled in the setup portal.
   These are advanced settings that is intended for advanced users. They are
-  typed into the portal field labeled special commands. Chargemailer also has a
+  typed into the portal field labeled special commands. DeviceAway also has a
   full command line interface that can set special commands and access all
   settings. Use a dumb terminal and connect to the Wall USB port at 115,200
   baud. Type the word help to see a list of all the CLI commands. Any setup
@@ -130,7 +132,7 @@ margin-top:0in;text-align:center'><b>&nbsp;</b></p>
  <tr>
   <td width=384 valign=top style='width:4.0in;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:0in;margin-top:
-  0in;line-height:normal'><b>cc:support@chargemailer.com</b> - used for beta
+  0in;line-height:normal'><b>cc:support@DeviceAway.net</b> - used for beta
   testing and sending a copy of all emails to the factory.</p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:0in;margin-top:
   0in;line-height:normal'>&nbsp;</p>
@@ -148,18 +150,44 @@ margin-top:0in;text-align:center'><b>&nbsp;</b></p>
  <tr>
   <td width=384 valign=top style='width:4.0in;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:0in;margin-top:
+  0in;line-height:normal'><b>graph10ms</b> – This command instructs the system
+  to send four emails per hour to the factory. Each email contains 10ms current
+  ADC sample data in a graph format, providing detailed analysis of the
+  charger’s performance.   Graphing stops after 24 hours.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=384 valign=top style='width:4.0in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:0in;margin-top:
+  0in;line-height:normal'><b>graph1sec</b> – This command instructs the system
+  to send a single email every 24 hours to the factory.   The email contains 1
+  second current ADC sample data in a graph format.   Graphing will continue
+  for any units with the word beta in the special commands.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=384 valign=top style='width:4.0in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:0in;margin-top:
   0in;line-height:normal'><b>server:</b> yourservername <b>port:</b>
   yourserverport <b>sender:</b> loginname <b>password:</b> yourpassword - sets
-  the login credentials for outgoing emails. By default, ChargeMailer uses a
+  the login credentials for outgoing emails. By default, DeviceAway uses a
   variety of smtp email servers to send notification emails. This allows
   redundancy when one server can not send the email, multiple backups will.
   Entering in a custom email server login allows the first attempt at sending
   an email to always use a server that you provide. SSL is enabled always.</p>
   </td>
  </tr>
+ <tr>
+  <td width=384 valign=top style='width:4.0in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:0in;margin-top:
+  0in;line-height:normal'><b>graph10ms – </b></p>
+  </td>
+ </tr>
 </table>
 
 </div>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:0in;margin-top:0in'>&nbsp;</p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:8.0pt'>&nbsp;</p>
 
