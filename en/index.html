@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="index.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 7.12.8, nicepage.com">
+    <meta name="generator" content="Nicepage 7.13.0, nicepage.com">
     <meta name="description" content="">
     
     
@@ -29,13 +29,13 @@
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body data-home-page="home.html" data-home-page-title="home" data-path-to-root="./" data-include-products="false" class="u-body u-clearfix u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="header"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-sheet-1">
+  <body data-home-page="home.html" data-home-page-title="home" data-path-to-root="./" data-include-products="false" class="u-body u-clearfix u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="header"><div class="u-clearfix u-sheet u-valign-bottom-md u-valign-middle-lg u-valign-middle-sm u-sheet-1">
         <a href="" class="u-align-left u-border-2 u-border-grey-75 u-image u-image-default u-logo u-image-1" data-image-width="2000" data-image-height="450">
           <img src="images/logo_white.png" class="u-logo-image u-logo-image-1" alt="" title="">
         </a>
-        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1" role="navigation" aria-label="Menu navigation">
+        <nav class="u-align-right-md u-align-right-sm u-align-right-xs u-menu u-menu-one-level u-offcanvas u-menu-1" role="navigation" aria-label="Menu navigation">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#" tabindex="-1" aria-label="Open menu" aria-controls="e2fa">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-hamburger-link-1" href="#" tabindex="-1" aria-label="Open menu" aria-controls="e2fa">
               <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
               <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
 </g></svg>
@@ -46,7 +46,7 @@
 </li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="./" style="padding: 10px 20px;">Home</a>
 </li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="setup.html" style="padding: 10px 20px;">Setup</a>
 </li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="faq.html" style="padding: 10px 20px;">FAQ</a>
-</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="contact.html" style="padding: 10px 20px;">Contact</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="contact.html" style="padding: 10px 13px 10px 20px;">Contact</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse" id="e2fa" role="region" aria-label="Menu panel">
@@ -64,10 +64,64 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
+        <div class="custom-expanded u-align-left u-clearfix u-custom-html u-custom-html-1">
+          <div id="lang-switcher" style="display:flex;gap:.5rem;align-items:center">
+            <label for="langSelect" style="font-size:.9rem">Language:</label>
+            <select id="langSelect" aria-label="Language">
+              <option value="en">English</option>
+              <option value="es">Español</option>
+            </select>
+          </div>
+          <script> (function () {
+  // ====== ENABLE/DISABLE FLAG ======
+  var ENABLE_LANG_SWITCH = false;   // <-- set to false to disable the script
+  // =================================
+
+  if (!ENABLE_LANG_SWITCH) {
+    console.log("Language switcher script is disabled.");
+    return; // stop running
+  }
+
+  var BASE = (location.pathname.startsWith('/DeviceAway/')) ? '/DeviceAway/' : '/';
+  var LANG_PATHS = { en: BASE + 'en/', es: BASE + 'es/' };
+  var COOKIE_NAME = 'site_lang', COOKIE_DAYS = 365;
+
+  function setCookie(n,v,d){var t=new Date();t.setTime(t.getTime()+d*24*60*60*1000);
+    document.cookie=n+"="+encodeURIComponent(v)+";expires="+t.toUTCString()+";path=/;SameSite=Lax";}
+  function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|; )'+n.replace(/[-./\\^$*+?()[\]{}|]/g,'\\{custom-html-placeholderr-0}')+'=([^;]*)'));return m?decodeURIComponent(m[1]):null;}
+
+  var select=document.getElementById('langSelect'); if(!select) return;
+  var path=location.pathname;
+  var urlLang=path.indexOf('/es/')===0||path.indexOf(BASE+'es/')===0?'es':
+              path.indexOf('/en/')===0||path.indexOf(BASE+'en/')===0?'en':null;
+  var cookieLang=getCookie(COOKIE_NAME);
+  var currentLang=urlLang||cookieLang||'en';
+  select.value=currentLang;
+
+  var onRoot=(path===BASE||path===BASE+'index.html'||path==='/index.html'||path==='/');
+  if(onRoot&&(cookieLang||urlLang)){
+    var dest=LANG_PATHS[cookieLang||urlLang]||LANG_PATHS['en'];
+    if(location.pathname!==dest) location.replace(dest);
+  }
+
+  select.addEventListener('change',function(){
+    var lang=select.value in LANG_PATHS?select.value:'en';
+    setCookie(COOKIE_NAME,lang,COOKIE_DAYS);
+    var target=LANG_PATHS[lang];
+    var rest=location.pathname.replace(/^.*?(\/en\/|\/es\/)/,'/');
+    if(rest&&rest!=='/'&&rest!=='/index.html'){
+      var candidate=target.replace(/\/$/,'')+rest;
+      location.href=candidate;
+    } else {
+      location.href=target;
+    }
+  });
+})(); </script>
+        </div>
       </div></header> 
     <section class="u-align-center u-clearfix u-container-align-center u-grey-5 u-valign-top-lg u-section-1" src="" id="carousel_3dba">
       <div class="u-border-2 u-border-grey-75 u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-image u-shading u-image-1" data-image-width="1536" data-image-height="512" data-animation-name="flipIn" data-animation-duration="1500" data-animation-delay="0" data-animation-direction="X">
-        <div class="u-container-layout u-valign-top-xs u-container-layout-1">
+        <div class="u-container-layout u-container-layout-1">
           <h1 class="u-align-center u-text u-text-body-alt-color u-text-1">Children get Better Sleep<br>without Devices 
           </h1>
           <h4 class="u-align-center u-text u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-2"> Simple setup • No subscriptions • Works with your Wi-Fi.&nbsp;<br>
