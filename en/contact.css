@@ -3,15 +3,15 @@
 }
 
 .u-section-1 .u-sheet-1 {
-  min-height: 942px;
+  min-height: 888px;
 }
 
 .u-section-1 .u-group-1 {
   width: 570px;
-  min-height: 862px;
+  min-height: 848px;
   box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
   height: auto;
-  margin: 21px 0 0 auto;
+  margin: 0 0 0 auto;
 }
 
 .u-section-1 .u-container-layout-1 {
@@ -22,12 +22,12 @@
   height: auto;
   min-height: 817px;
   width: 477px;
-  margin: 0 auto;
+  margin: 13px auto 0;
 }
 
 .u-section-1 .u-list-1 {
   width: 524px;
-  margin: -765px auto 60px 0;
+  margin: -730px auto 60px 0;
 }
 
 .u-section-1 .u-repeater-1 {
@@ -98,6 +98,10 @@
 }
 
 @media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 1064px;
+  }
+
   .u-section-1 .u-group-1 {
     width: 470px;
     height: auto;
@@ -105,6 +109,10 @@
 
   .u-section-1 .u-custom-html-1 {
     width: 470px;
+  }
+
+  .u-section-1 .u-list-1 {
+    margin-top: 20px;
   }
 
   .u-section-1 .u-container-layout-2 {
@@ -120,10 +128,11 @@
 
 @media (max-width: 991px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 918px;
+    min-height: 887px;
   }
 
   .u-section-1 .u-group-1 {
+    min-height: 839px;
     margin-top: 18px;
   }
 
@@ -131,9 +140,16 @@
     padding-top: 16px;
   }
 
+  .u-section-1 .u-custom-html-1 {
+    min-height: 823px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .u-section-1 .u-list-1 {
     width: 220px;
-    margin-top: -774px;
+    margin-top: -710px;
   }
 
   .u-section-1 .u-repeater-1 {
@@ -174,10 +190,18 @@
 }
 
 @media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 974px;
+  }
+
   .u-section-1 .u-container-layout-1 {
     padding-top: 80px;
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .u-section-1 .u-list-1 {
+    margin-top: 20px;
   }
 
   .u-section-1 .u-repeater-1 {
@@ -198,11 +222,11 @@
 
 @media (max-width: 575px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 1558px;
+    min-height: 1563px;
   }
 
   .u-section-1 .u-group-1 {
-    min-height: 818px;
+    min-height: 823px;
     margin-right: initial;
     margin-left: initial;
     width: auto;
@@ -215,16 +239,16 @@
   }
 
   .u-section-1 .u-custom-html-1 {
+    min-height: 817px;
     width: 340px;
-    margin-left: 0;
-    margin-right: 0;
   }
 
   .u-section-1 .u-list-1 {
-    width: 262px;
-    margin-top: 31px;
-    margin-left: auto;
-    margin-bottom: 31px;
+    margin-top: 35px;
+    margin-bottom: 27px;
+    margin-right: initial;
+    margin-left: initial;
+    width: auto;
   }
 
   .u-section-1 .u-repeater-1 {
